@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Team Jupiter">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!--style sheet-->
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <!--Javascript-->
-    <link type="text/javascript" href="assets/script.js" />
-    <title>Welcome</title>
-</head>
-<body>
-    
-</body>
+<?php
+   include "session.php";
+?>
+<html>
+   
+   <head>
+      <title>Welcome </title>
+   </head>
+   
+   <body>
+      <h1>Welcome <?php echo $row['username']; ?></h1> 
+      
+      
+      <div>
+          <p>Your Full Name is: <?php echo $row['full_name']?></p>
+          <p>Your Username is: <?php echo $row['username']?></p>
+          <p>Your Phone number is: <?php echo $row['phone_number']?></p>
+      </div>
+       <div>
+        <h5><a href = "logout.php">Sign Out</a></h5>
+       </div>
+       
+   </body>
+   
 </html>
